@@ -12,4 +12,5 @@
 
     // Insertamos en la base de datos.
     mysql_query("INSERT INTO Curso (nCurso, numHora, capacidad) VALUES ('$nCurso','$numHora','$capacidadCurso')");
+    header('Location: /inc/verCursos.php')
 ?>
