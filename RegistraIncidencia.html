@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar una incidencia.</title>
+</head>
+<body>
+    <h1>Registrar una incidencia:</h1>
+    <form method="post" action="/inc/NuevaIncidencia.php" id="formulario">
+        <label>Identificador de cliente:</label>
+        <input type="number" name="idCliente" size="20">
+        <label>Identificador de producto:</label>
+        <input type="number" name="idProducto" size="20">
+        <label>Comentario::</label>
+        <input type="text" name="comentario" size="1000">
+        <label>DNI/Pasaporte::</label>
+        <input type="text" name="DNIPasaporte" size="10">
+        <label>Nombre de la persona que registra la incidencia::</label>
+        <input type="text" name="NombrePersonaRegistra" size="50">
+        <label>Apellido de la persona que registra la incidencia::</label>
+        <input type="text" name="Apellido1PersonaRegistra" size="50">
+        <label>Segundo apellido de la persona que registra la incidencia::</label>
+        <input type="text" name="Apellido2PersonaRegistra" size="50">
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
