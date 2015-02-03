@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Formulario Clientes</title>
+<script language="javascript">
+	function validar(){
+		var idtienda= f.idTienda.value;
+		var idcomercialventas= f.idComercialVentas.value;
+		var cantidad= f.cantidad.value;
+		
+		nombre= nombre.toUpperCase();
+		direccion= direccion.toUpperCase();
+		ciudad= ciudad.toUpperCase();
+				
+		if(idtienda== "" || idcomercialventas== "" || cantidad <1){
+			alert('Debe introducir todos los datos en el formulario o poner una cantidad mayor que 0');
+			return false;
+		}
+		else{
+		f.idtienda.value=idtienda;
+		f.idcomercialventas.value=idcomercialventas;
+		f.cantidad.value=cantidad;
+		return true;
+		}
+	}
+</script>
+</head>
+
+<body>
+	<h2 align="center"><b>Ventas</b></h2>
+	<h2 align="center"><b>Datos del pedido de la tienda</b></h2>
+	<form name="f" method="get" action="Ventas.php" onSubmit="return validar()">
+		<table align="center" border="3">
+				<tr><td align="center" colspan="1">Identificador de la tienda:</td><td colspan="1"><input type="text" name="idTienda" size="20"></td></tr>		
+				<tr><td align="center" colspan="1">IdComercialVentas:<td colspan="1"><input type="text" name="idComercialVentas" size="20"></tr>
+				<tr><td align="center" colspan="1">Cantidad:<td><input name="cantidad" type="text" size="20"></tr>
+				<tr><td align="center" colspan="1"><input type="submit" name="enviar" value="Enviar"><td align="center"><input type="reset" name="borrar" value="Borrar"></tr>
+		</table>	
+	</form>
+</body>
+</html>
