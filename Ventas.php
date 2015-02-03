@@ -9,10 +9,14 @@
 		$ide= $_GET['idEmpleadoVentas'];
 		$idc= $_GET['idComercialVentas'];
 		$can= $_GET['cantidad'];
-			
-		include ('conexion.inc');	
-		$consulta="Insert into vendeA values (null, '$idt', '$ide', '$idc', '$can') ";
-		conexion('a2415958_ddsi', $consulta);	 //ejecutamos la consulta de alta
+		
+	// Conectamos con la base de datos
+    $host = mysql_connect(DB_HOST, DB_USER, DB_PASS);
+    mysql_select_db(DB_NAME, $host);
+
+    // Insertamos en la base de datos.
+    mysql_query("INSERT INTO vendeA (nCurso, numHora, capacidad) VALUES ('null','$idt','$ide','$idc', '$can')");
+
 	?>
 </body>
 </html>
