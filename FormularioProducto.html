@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Formulario Productos</title>
+<script language="javascript">
+	function validar(){
+		var idproducto= f.idProducto.value;
+		var idfabrica= f.idFabrica.value;
+		var idempleado= f.idEmpleado.value;
+		
+		
+		if(idproducto== "" || idfabrica== "" || idempleado == ""){
+			alert('Debe introducir todos los datos en el formulario');
+			return false;
+		}
+		else{
+		f.idProducto.value=idproducto;
+		f.idFabrica.value=idfabrica;
+		f.idEmpleado.value=idempleado;
+		return true;
+		}
+	}
+</script>
+</head>
+
+<body>
+	<h2 align="center"><b>Productos</b></h2>
+	<h2 align="center"><b>Datos del producto</b></h2>
+	<form name="f" method="get" action="producto.php" onSubmit="return validar()">
+		<table align="center" border="3">
+				<tr><td align="center" colspan="1">Identificador del producto:</td><td colspan="1"><input type="text" name="idproducto" size="20"></td></tr>		
+				<tr><td align="center" colspan="1">IdFabrica:<td colspan="1"><input type="text" name="idfabrica" size="20"></tr>
+				<tr><td align="center" colspan="1">idEmpleado:<td><input name="idempleado" type="text" size="20"></tr>
+				<tr><td align="center" colspan="1"><input type="submit" name="enviar" value="Enviar"><td align="center"><input type="reset" name="borrar" value="Borrar"></tr>
+		</table>	
+	</form>
+</body>
+</html>
