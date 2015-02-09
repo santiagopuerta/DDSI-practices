@@ -1,0 +1,14 @@
+DELIMITER @
+
+CREATE TRIGGER `disparador` BEFORE INSERT ON `FabricadoEn`
+FOR EACH ROW
+
+DECLARE 
+@ precio number:= 100;
+
+begin
+set FabricadoEn.PrecioMontaje=precio where select FabricadoEn.PrecioMontaje from FabricadoEn where fabricadoEn.PrecioMontaje<0 or FabricadoEn.PrecioMontaje=0;
+end;
+
+@
+DELIMITER;
